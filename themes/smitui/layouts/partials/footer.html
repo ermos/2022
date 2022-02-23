@@ -1,0 +1,6 @@
+<footer id="footer">
+    © {{ now.Format "2006"}} - All rights reserved
+</footer>
+
+{{ $js := resources.Get "app.js" | js.Build | resources.Minify }}
+<script src="{{ $js.Permalink }}"></script>

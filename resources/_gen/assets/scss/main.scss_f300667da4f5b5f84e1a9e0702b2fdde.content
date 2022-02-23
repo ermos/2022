@@ -1,0 +1,103 @@
+footer {
+  margin-top: 10px;
+  border-top: 3px solid #e6e6e6;
+  padding: 20px;
+  text-align: center;
+  color: #4d4d4d; }
+
+#elevator {
+  position: fixed;
+  right: 20px;
+  bottom: -60px;
+  background-image: url("/img/elevator.png");
+  background-size: cover;
+  width: 120px;
+  height: 60px;
+  cursor: pointer;
+  transition: all ease-in 300ms; }
+  #elevator.active {
+    bottom: -20px; }
+  #elevator.leave {
+    bottom: -60px !important; }
+  #elevator:hover {
+    bottom: 0; }
+  #elevator:after {
+    text-align: center;
+    content: "We go up?";
+    position: absolute;
+    left: -250px;
+    top: -50px;
+    width: 200px;
+    padding: 20px;
+    background-color: #fff;
+    color: #b3b3b3;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #e6e6e6;
+    display: none; }
+  #elevator:hover:after {
+    display: block; }
+
+.github {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .github__item {
+    display: block;
+    margin: 10px;
+    width: calc(50% - 20px);
+    padding: 10px;
+    color: #4d4d4d;
+    transition: all ease-in 200ms; }
+    .github__item:hover {
+      color: inherit; }
+  .github__card {
+    border: 1px solid #e6e6e6;
+    border-radius: 5px; }
+    .github__card:hover:nth-child(even) {
+      transform: scale(1.05) rotate(5deg); }
+    .github__card:hover:nth-child(odd) {
+      transform: scale(1.05) rotate(-5deg); }
+  .github__title {
+    margin-top: 0;
+    padding: 5px;
+    line-height: 1;
+    color: #0059ff;
+    font-size: 1.6rem; }
+  .github__desc {
+    padding: 5px;
+    line-height: 1;
+    font-size: 1.6rem; }
+  .github__info {
+    padding: 5px;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  .github__lang {
+    font-weight: bold; }
+
+.post__title {
+  font-size: 3.2rem;
+  line-height: 1.1;
+  padding-bottom: 0; }
+
+.post__time {
+  padding-top: 0;
+  color: #666666; }
+
+.post__desc {
+  font-size: 2.3rem;
+  line-height: 1.1;
+  color: #4d4d4d; }
+
+.post__main-picture {
+  margin: 30px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+
+.post img {
+  max-width: 100%;
+  border-radius: 10px; }
+
+.tip {
+  color: #4d4d4d; }

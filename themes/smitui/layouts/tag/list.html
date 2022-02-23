@@ -1,0 +1,5 @@
+{{ $pag := .Paginate .Pages }}
+{{ range $pag.Pages }}
+{{ partial "article-block.html" . }}
+{{ end }}
+{{ partial "pagination.html" . }}

@@ -1,0 +1,46 @@
+@import "../theme";
+
+#elevator {
+  position: fixed;
+  right: 20px;
+  bottom: -60px;
+  background-image: url($images + "/elevator.png");
+  background-size: cover;
+  width: 120px;
+  height: 60px;
+  cursor:pointer;
+  transition: all ease-in 300ms;
+
+  &.active {
+    bottom: -20px;
+  }
+
+  &.leave {
+    bottom: -60px!important;
+  }
+
+  &:hover {
+    bottom: 0;
+  }
+
+  &:after {
+    text-align: center;
+    content: "We go up?";
+    position: absolute;
+    left: -250px;
+    top: -50px;
+    width: 200px;
+    padding:20px;
+    background-color: $main-color;
+    color: $main-color-dark-3;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid $main-color-dark-1;
+    //box-shadow: 0 0 10px rgba($text-color, 0.1);
+    display:none;
+  }
+
+  &:hover:after {
+    display: block;
+  }
+}

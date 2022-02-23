@@ -1,0 +1,29 @@
+<section class="block articles">
+    <h2 class="articles__title">
+        <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <ul class="articles__tags">
+        {{ range .Params.tags }}
+        <li><a href="/tags/{{ . | urlize }}">#{{ . }}</a> </li>
+        {{ end }}
+    </ul>
+    <div class="articles__relate">
+        {{ if .Params.category }}
+        <button class="articles__relate-item">
+            <a href="/category/{{ .Params.category | urlize }}">Category #{{ .Params.category }}</a>
+        </button>
+        {{ end }}
+        {{ if .Params.series }}
+        <button class="articles__relate-item">
+            <a href="/series/{{ .Params.series | urlize }}">Series "{{ .Params.series }}"</a>
+        </button>
+        {{ end }}
+    </div>
+    <p class="articles__short-desc">
+        {{ .Params.description }}
+    </p>
+    <div class="articles__footer">
+        <time class="articles__create-at" datetime='{{ .Date.Format "2006-01-02" }}'>{{ dateFormat (default "Mon, Jan 2, 2006" .Site.Params.dateFormat) .Date }}</time>
+        <p class="articles__time-to-read">{{ .ReadingTime }} min read</p>
+    </div>
+</section>

@@ -1,0 +1,5 @@
+<a href="{{ .Permalink }}" class="work">
+    <img class="work__picture" title="{{ .Title | upper }}" src="{{ .Params.Picture | relURL }}" />
+    <h3 class="work__title">{{ .Title | upper }}</h3>
+    <time class="work__time" datetime="{{ .Date.Format "2006" }}">{{ .Date.Format "2006" }}</time>
+</a>

@@ -1,0 +1,72 @@
+{{ define "critical" }}
+{{ (resources.Get "critical.index.scss" | resources.ToCSS | minify).Content | safeCSS }}
+{{ end }}
+{{ define "main" }}
+<h1 class="logo">Hello, I'm <span>Kilian</span> 🐊</h1>
+<p>
+    I'm a <span>full-stack developer</span> passionate about web technologies since his childhood.
+    I started building websites when I was ten year old and I decided to make it my job.
+</p>
+<h2>Ok, so what do you do ?</h2>
+<p>
+    Currently, I'm working at
+    <b><a target="_blank" href="https://assessfirst.com">Assessfirst 🦄</a></b> as <span>back-end developer</span>,
+    a future unicorn (even if It's already one). It doesn't stop there, like every self-respecting passionate,
+    <span>I work on many personal projects</span>. You can find some of their below 😉
+</p>
+<section id="works" class="works">
+    {{ with .Site.GetPage "/work" }}
+    {{ $projects := .Data.Pages.GroupByDate "2006-01-02" }}
+    {{ partial "work-block.html" (index .Pages 0) }}
+    {{ partial "work-block.html" (index .Pages 1) }}
+    {{ partial "work-block.html" (index .Pages 2) }}
+    {{ end }}
+    <a href="#" class="work">
+        <img class="work__picture" title="Show more !" src="{{ "/img/work/miniatures/more.jpg" | relURL }}" />
+        <h3 class="work__title">Show more !</h3>
+    </a>
+</section>
+<h2>Nice ! And what about open-source ?</h2>
+<p>
+    You can find some stuff on my <a href="https://github.com/ermos">Github profile</a>,
+    <span>when I need a module</span> for one of my personal projects,
+    <span>I try to transform it into a library</span> and I publish it in <a href="https://github.com/">Github</a>.
+</p>
+<section id="github" class="github" data-github-count="4"></section>
+<h2>A final word?</h2>
+<p>
+    <span>If you need something</span> about me, <span>you can contact me</span>
+    from this <a href="{{ "/contact" | relURL }}">form</a> or from
+    <a href="https://www.linkedin.com/in/kilian-smiti-106556148/">Linkedin</a>.
+    For the youngest of you,
+    you can contact me also on <a href="https://twitter.com/doplex_">Twitter</a> or Discord (doplex#6928).
+</p>
+<p>
+    This is the end of my presentation,
+    I leave you with <span>this beautiful heart</span> which <span>represents my technical stack</span>.
+    It is <span>made in css</span>, you can pass hover each logo with your cursor if you hesitate about one logo.
+</p>
+<div class="heart-stack">
+    <i title="reactjs" class="icon-reactjs"></i>
+    <i title="vuejs" class="icon-vuejs"></i>
+    <i title="symfony" class="icon-symfony"></i>
+    <i title="sass" class="icon-sass"></i>
+    <i title="php" class="icon-php"></i>
+    <i title="nodejs" class="icon-nodejs"></i>
+    <i title="nginx" class="icon-nginx"></i>
+    <i title="nextjs" class="icon-nextjs"></i>
+    <i title="mongodb" class="icon-mongodb"></i>
+    <i title="mariadb" class="icon-mariadb"></i>
+    <i title="laravel" class="icon-laravel"></i>
+    <i title="jira" class="icon-jira"></i>
+    <i title="jetbrains" class="icon-jetbrains"></i>
+    <i title="golang" class="icon-golang"></i>
+    <i title="gitlab" class="icon-gitlab"></i>
+    <i title="github" class="icon-github"></i>
+    <i title="git" class="icon-git"></i>
+    <i title="elastic" class="icon-elastic"></i>
+    <i title="docker" class="icon-docker"></i>
+    <i title="confluence" class="icon-confluence"></i>
+    <i title="nuxtjs" class="icon-nuxtjs"></i>
+</div>
+{{ end }}

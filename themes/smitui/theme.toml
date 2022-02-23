@@ -1,0 +1,12 @@
+name = "smitui"
+license = "MIT"
+licenselink = "https://github.com/ermos/hugo-theme-smitui/blob/master/LICENSE.md"
+description = "A Fast and SEO friendly blog theme for Hugo"
+homepage = "https://github.com/ermos/hugo-theme-smitui"
+tags = ["minimalist", "fast", "seo", "simple", "light", "responsive", "blog", "tags"]
+features = ["minimalist", "fast", "seo", "simple", "responsive", "tags"]
+min_version = "0.1.0"
+
+[author]
+    name = "ermos"
+    homepage = "https://github.com/ermos"

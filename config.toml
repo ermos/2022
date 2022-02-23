@@ -1,0 +1,38 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+theme = 'smitui'
+[menu]
+  [[menu.main]]
+    name = "Blog"
+    identifier = "blog"
+    url = "/post/"
+    weight = 1
+
+  [[menu.main]]
+    name = "Libraries"
+    identifier = "libraries"
+    url = "/libs/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Logo"
+    identifier = "logo"
+    url = "/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Works"
+    url = "/work/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 5
+
+[taxonomies]
+  category = "category"
+  tag = "tags"
+  series = "series"
+
+picture = true

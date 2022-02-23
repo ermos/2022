@@ -1,0 +1,10 @@
+@import "../theme";
+
+footer {
+  margin-top: $spacing-medium;
+  border-top: 3px solid $main-color-dark-1;
+  padding: $spacing-medium * 2;
+  text-align: center;
+  color: $text-color-light-3;
+}
+

@@ -1,0 +1,15 @@
+@import "../theme";
+
+body {
+  margin: auto;
+  padding: $spacing-medium;
+  max-width: $interface-size;
+  width: 100%;
+  background-color: $main-color;
+  color: $text-color;
+}
+
+main {
+  margin: $spacing-large * 4 0;
+}
+

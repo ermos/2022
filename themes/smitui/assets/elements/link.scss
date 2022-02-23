@@ -1,0 +1,14 @@
+@import "../theme";
+
+a {
+  color: $neutral-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $neutral-color-light-1;
+  }
+
+  &:active {
+    color: $neutral-color-dark-1;
+  }
+}

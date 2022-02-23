@@ -1,0 +1,59 @@
+@import "../theme";
+
+.github {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  &__item {
+    display: block;
+    margin: $spacing-medium;
+    width: calc(50% - #{$spacing-medium * 2});
+    padding: $spacing-medium;
+    color: $text-color-light-3;
+    transition: all ease-in 200ms;
+
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  &__card {
+    border: 1px solid $main-color-dark-1;
+    border-radius: 5px;
+
+    &:hover:nth-child(even) {
+      transform: scale(1.05) rotate(5deg);
+    }
+
+    &:hover:nth-child(odd) {
+      transform: scale(1.05) rotate(-5deg);
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    padding: $spacing-little;
+    line-height: 1;
+    color: $neutral-color;
+    font-size: 1.6rem;
+  }
+
+  &__desc {
+    padding: $spacing-little;
+    line-height: 1;
+    font-size: 1.6rem;
+  }
+
+  &__info {
+    padding: $spacing-little;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__lang {
+    font-weight: bold;
+  }
+}

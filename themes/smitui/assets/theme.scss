@@ -1,0 +1,53 @@
+// Locations
+$fonts: "/fonts";
+$images: "/img";
+
+// App
+$interface-size: 800px;
+$spacing-medium: 10px;
+$spacing-little: 5px;
+$spacing-large: 20px;
+$header-size: 50px;
+
+// Main color
+$main-color: #fff;
+$main-color-dark-1: darken($main-color, 10%);
+$main-color-dark-2: darken($main-color, 20%);
+$main-color-dark-3: darken($main-color, 30%);
+
+// Neutral Color
+$neutral-color: #0059ff;
+$neutral-color-light-1: lighten($neutral-color, 10%);
+$neutral-color-dark-1: darken($neutral-color, 10%);
+
+// Text Color
+$text-color: #000;
+$text-color-light-1: lighten($text-color, 10%);
+$text-color-light-2: lighten($text-color, 20%);
+$text-color-light-3: lighten($text-color, 30%);
+$text-color-light-4: lighten($text-color, 40%);
+
+// Scrollbar
+$scrollbar-size: 6px;
+$scrollbar-bg-color: #F0F0F0;
+
+// Colors
+$color-red: #E53935;
+$color-pink: #D81B60;
+$color-purple: #8E24AA;
+$color-deep-purple: #5E35B1;
+$color-indigo: #3949AB;
+$color-blue: #1E88E5;
+$color-light-blue: #039BE5;
+$color-cyan: #00ACC1;
+$color-teal: #00897B;
+$color-green: #43A047;
+$color-light-green: #7CB342;
+$color-lime: #C0CA33;
+$color-yellow: #FDD835;
+$color-amber: #FFB300;
+$color-orange: #FB8C00;
+$color-deep-orange: #F4511E;
+$color-brown: #6D4C41;
+$color-grey: #757575;
+$color-blue-grey: #546E7A;

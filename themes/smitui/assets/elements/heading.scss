@@ -1,0 +1,41 @@
+@import "../theme";
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text-color;
+  font-weight: bold;
+  padding: $spacing-medium;
+  margin-top: $spacing-large;
+  line-height: 1.3;
+
+  a, a:hover, a:active {
+    color: inherit;
+  }
+
+  span {
+    color: $neutral-color;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.8rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+h6 {
+  font-size: 1.4rem;
+}

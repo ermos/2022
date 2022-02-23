@@ -1,0 +1,112 @@
+@import "../theme";
+
+.logo {
+  font-size: 5rem;
+}
+
+$x: 50px;
+$y: 50px;
+
+.heart-stack {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: $spacing-medium auto;
+  i {
+    position: absolute;
+    transition: all 300ms ease-in;
+    overflow: hidden;
+
+    &:nth-child(1) {
+      left: $x;
+      top: $y + 2px;
+    }
+    &:nth-child(2) {
+      left: $x + 10px;
+      top: $y - 10px;
+    }
+    &:nth-child(3) {
+      left: $x + 25px;
+      top: $y - 10px;
+    }
+    &:nth-child(4) {
+      left: $x + 40px;
+      top: $y;
+    }
+    &:nth-child(5) {
+      left: $x + 55px;
+      top: $y - 10px;
+    }
+    &:nth-child(6) {
+      left: $x + 72px;
+      top: $y - 10px;
+    }
+    &:nth-child(7) {
+      left: $x + 90px;
+      top: $y;
+    }
+    &:nth-child(8) {
+      left: $x + 95px;
+      top: $y + 18px;
+    }
+    &:nth-child(9) {
+      left: $x + 90px;
+      top: $y + 35px;
+    }
+    &:nth-child(10) {
+      left: $x + 85px;
+      top: $y + 50px;
+    }
+    &:nth-child(11) {
+      left: $x + 80px;
+      top: $y + 65px;
+    }
+    &:nth-child(12) {
+      left: $x + 70px;
+      top: $y + 80px;
+    }
+    &:nth-child(13) {
+      left: $x + 60px;
+      top: $y + 95px;
+    }
+    &:nth-child(14) {
+      left: $x + 45px;
+      top: $y + 110px;
+    }
+    &:nth-child(15) {
+      left: $x + 33px;
+      top: $y + 110px;
+    }
+    &:nth-child(16) {
+      left: $x + 25px;
+      top: $y + 95px;
+    }
+    &:nth-child(17) {
+      left: $x + 15px;
+      top: $y + 80px;
+    }
+    &:nth-child(18) {
+      left: $x + 5px;
+      top: $y + 65px;
+    }
+    &:nth-child(19) {
+      left: $x;
+      top: $y + 50px;
+    }
+    &:nth-child(20) {
+      left: $x - 5px;
+      top: $y + 35px;
+    }
+    &:nth-child(21) {
+      left: $x - 10px;
+      top: $y + 18px;
+    }
+
+    &:hover {
+      transform: scale(3);
+      z-index: 2;
+      background-color: $main-color;
+      border-radius: 50%;
+    }
+  }
+}

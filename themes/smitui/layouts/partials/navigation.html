@@ -1,0 +1,17 @@
+<nav class="navigations">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    {{ $active := (eq .Name $currentPage.Title) }}
+    {{ $active = or $active (and (eq .Identifier "blog") (eq $currentPage.Section "post")) }}
+    {{ $active = or $active (and (eq .Identifier "home") (eq $currentPage.Title "")) }}
+    {{ $active = or $active (and (eq .Name "Tags") (eq $currentPage.Section "tags")) }}
+    {{ if eq .Identifier "logo" }}
+    <a class="navigations__logo" href="/"><div class="navigations__icon">KS</div></a>
+    {{ else }}
+    <a title="{{ .Name }}"
+       href="{{ .URL }}"
+       class="{{ if $active }}active{{ end }}"
+    >{{ .Name }}</a>
+    {{ end }}
+    {{ end }}
+</nav>

@@ -1,0 +1,14 @@
+{{ define "critical" }}
+{{ (resources.Get "critical.work.scss" | resources.ToCSS | minify).Content | safeCSS }}
+{{ end }}
+{{ define "main" }}
+<h1>My Developer Odyssey</h1>
+<h2>List of my works</h2>
+<section id="works" class="works">
+    {{ range .Data.Pages.GroupByDate "2006-01-02" }}
+        {{ range .Pages }}
+            {{ partial "work-block.html" . }}
+        {{ end }}
+    {{ end }}
+</section>
+{{ end }}
