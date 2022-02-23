@@ -35,7 +35,10 @@
     margin-top: 0;
     padding: $spacing-little;
     line-height: 1;
-    color: $neutral-color;
+    color: #f94186;
+    background: -webkit-linear-gradient(45deg, #f94186, #f3dc2c 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.6rem;
   }
 

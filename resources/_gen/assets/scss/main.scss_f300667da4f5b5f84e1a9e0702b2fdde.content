@@ -62,7 +62,10 @@ footer {
     margin-top: 0;
     padding: 5px;
     line-height: 1;
-    color: #0059ff;
+    color: #f94186;
+    background: -webkit-linear-gradient(45deg, #f94186, #f3dc2c 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 1.6rem; }
   .github__desc {
     padding: 5px;

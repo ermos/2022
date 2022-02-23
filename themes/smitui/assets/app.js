@@ -98,3 +98,60 @@ class Github {
 }
 
 new Github()
+
+// Head
+
+class Head {
+    head = null;
+    curr = "f";
+
+    constructor() {
+        this.construct()
+
+        const ctx = this;
+        const firstArea = window.innerWidth / 3;
+        const thirdArea = firstArea * 2;
+        document.addEventListener("mousemove", function(e) {
+            console.log("here");
+            if (e.clientY > (ctx.headPosition.top + ctx.head.clientHeight)) {
+                if (e.clientX < firstArea) {
+                    ctx.activate("dl");
+                } else if (e.clientX > thirdArea) {
+                    ctx.activate("dr");
+                } else {
+                    ctx.activate("d");
+                }
+            } else {
+                if (e.clientX < firstArea) {
+                    ctx.activate("l");
+                } else if (e.clientX > thirdArea) {
+                    ctx.activate("r");
+                } else {
+                    ctx.activate("f");
+                }
+            }
+        });
+    }
+
+    construct() {
+        this.head = document.getElementById("head");
+        this.headPosition = this.head.getBoundingClientRect();
+
+        for (var i = 0; i < this.head.children.length; i++) {
+            const el = this.head.children[i];
+            this[el.getAttribute("data-pos")] = el;
+        }
+    }
+
+    activate(pos) {
+        if (pos === this.curr) {
+            return;
+        }
+
+        this[this.curr].classList.remove("active");
+        this[pos].classList.add("active");
+        this.curr = pos;
+    }
+}
+
+new Head()

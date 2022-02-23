@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ $.Site.LanguageCode | default "en" }}">
   <head>
-    <title>
-      {{ if .Title }}{{ .Title }}  &middot; {{ end }}
-      Kilian Smiti
-      {{ if not .Title }}&middot; Full-Stack Developer{{ end }}
-    </title>
+    <title>{{ if .Title }}{{ .Title }} &middot; {{ end }}Kilian Smiti{{ if not .Title }} &middot; Full-Stack Developer{{ end }}</title>
     <style>{{ block "critical" . }}{{ end }}</style>
     {{ partial "head.html" . }}
 

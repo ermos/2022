@@ -1,12 +1,16 @@
 @import "../theme";
 
+$nav-height: 50px;
+
 .navigations {
+  position: relative;
   width: 100%;
   display: flex;
   align-items: center;
   border-bottom: 3px solid $main-color-dark-1;
   border-top: 0;
-  height: 50px;
+  margin-top: 50px;
+  height: $nav-height;
   justify-content: space-around;
 
   & > a {
@@ -15,27 +19,140 @@
     font-weight: bold;
     color: $text-color-light-3;
 
-    &.active {
+    &:hover, &.active {
       color: $text-color;
     }
   }
 
   &__logo {
+    position: relative;
     flex: inherit!important;
-  }
-
-  &__icon {
+    z-index: 2;
     width: 80px;
     height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     border-radius: 50%;
+    overflow: hidden;
+
+    &:hover {
+      animation: logo--bounce 150ms ease-in;
+      transform: scale(1.2);
+
+      .head__s {
+        opacity: 1!important;
+        z-index: 3;
+      }
+    }
+  }
+
+  &__hover {
+    position: absolute;
+    content: "";
+    bottom: -3px;
+    left: 0;
     background-color: $text-color;
-    color: #fff;
-    font-weight: bold;
-    font-size: 2.4rem;
-    transform: rotate(-15deg);
+    opacity: 0;
+    height: 3px;
+    width: 25%;
+    transition: all 200ms ease-in;
+    z-index: 1;
+  }
+
+  & a:nth-child(1).active ~ &__hover {
+    opacity: 1;
+    left: 0;
+  }
+
+  & a:nth-child(2).active ~ &__hover {
+    opacity: 1;
+    left: 25%;
+  }
+
+  & a:nth-child(3).active ~ &__hover {
+    opacity: 1;
+    left: 50%;
+    width: 0;
+  }
+
+  & a:nth-child(4).active ~ &__hover {
+    opacity: 1;
+    left: 50%;
+  }
+
+  & a:nth-child(5).active ~ &__hover {
+    opacity: 1;
+    left: 75%;
+  }
+
+  & a:nth-child(1):hover ~ &__hover {
+    opacity: 1;
+    left: 0;
+  }
+
+  & a:nth-child(2):hover ~ &__hover {
+    opacity: 1;
+    left: 25%;
+  }
+
+  & a:nth-child(3):hover ~ &__hover {
+    opacity: 1;
+    left: 50%;
+    width: 0;
+  }
+
+  & a:nth-child(4):hover ~ &__hover {
+    opacity: 1;
+    left: 50%;
+  }
+
+  & a:nth-child(5):hover ~ &__hover {
+    opacity: 1;
+    left: 75%;
+  }
+}
+
+.head {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  z-index: 2;
+  opacity: 0;
+
+  &.active {
+    opacity: 1;
+  }
+
+  &__f {
+    background-image:url($images + '/logo/f.jpg');
+  }
+  &__s {
+    background-image:url($images + '/logo/s.jpg');
+  }
+  &__l {
+    background-image:url($images + '/logo/l.jpg');
+  }
+  &__r {
+    background-image:url($images + '/logo/r.jpg');
+  }
+  &__d {
+    background-image:url($images + '/logo/d.jpg');
+  }
+  &__dl {
+    background-image:url($images + '/logo/dl.jpg');
+  }
+  &__dr {
+    background-image:url($images + '/logo/dr.jpg');
+  }
+}
+
+@keyframes logo--bounce {
+  0% {
+    transform: scale(1);
+  }
+  90% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1.3);
   }
 }

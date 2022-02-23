@@ -15,7 +15,7 @@ theme = 'smitui'
     weight = 2
 
   [[menu.main]]
-    name = "Logo"
+    name = "Kilian SMITI"
     identifier = "logo"
     url = "/"
     weight = 3
